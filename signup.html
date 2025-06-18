@@ -18,51 +18,53 @@
         <div class="back-drop-log"></div>
         <nav class="navbar navbar-dark navbar-expand-lg bg-none px-md-5">
             <div class="container-fluid">
-                <a class="navbar-brand fs-1 fw-bold" id="title" style="color: #f77051; font-size:2.5rem !important"  href="#">FELIXI</a>
+                <a class="navbar-brand fs-1 fw-bold" id="title" style="color: #f77051;"  href="#">FELIXI</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" style="color: #5d0516"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-0 mx-auto mb-2 mb-lg-0">
-                            <li class="nav-item me-2">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item me-2">
-                                <a class="nav-link" href="./main.html">Library</a>
-                            </li>
-                            <li class="nav-item me-2">
-                                <a href="./signup.html"> <button id="login" class="btn">Signup</button></a>
-                            </li>
-                        </ul>
-                    </div>
-             </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-0 mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item me-2">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item me-2">
+                                    <a class="nav-link" href="./main.html">Library</a>
+                                </li>
+                                <li class="nav-item me-2 active">
+                                    <button id="login" class="btn">Login</button>
+                                </li>
+                            </ul>
+                   </div>
+            </div>
         </nav>
 
-        <div class=" welcome_1">
+        <div class="welcome_1 my-3">
           <div class="row">
-            <div class="sheet col-12 m-auto text-light p-5 pt-3">
+            <div class="sheet col-12 m-auto text-light p-2 p-md-5 pt-3">
               <h5 class="text-center card-title display-5">Multiversal Login</h5>
 
               <form action="./main.html" class="p-3">
                 <div class="my-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="name" class="form-control text-white" id="name" aria-describedby="name" required/>
+                </div>
+                <div class="my-3">
                   <label for="email" class=" form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control text-white"
-                    id="email"
-                    aria-describedby="emailHelp"
-                    required
-                  />
+                  <input type="email" class="form-control text-white" id="email" aria-describedby="emailHelp" required/>
                 </div>
                 <div class="my-5">
                   <label for="password" class="form-label">Password</label>
                   <input type="password" class="form-control text-white" id="password" required/>
                 </div>
+                <div class="my-5">
+                  <label for="c-password" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control text-white" id="c-password" required/>
+                </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-lg rounded-pill">Login</button>
+                  <button type="submit" class="btn btn-lg rounded-pill">Sign Up</button>
                 </div>
                 <p class="text-center mt-3">
-                  Don't have an account? <a href="./signup.html">Sign Up</a>
+                   Already into the Universe? <a href="./login.html">LogIn Now</a>
                 </p>
               </form>
             </div>

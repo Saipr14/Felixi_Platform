@@ -16,7 +16,6 @@ html, body {
 
 /* navbar css settings start*/
 .navbar-brand{
-    font-size: clamp(1rem, 5vw, 8rem) !important;
     transition: color 0.3s ease;
 }
 
@@ -112,7 +111,6 @@ html, body {
 .right-slider {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -127,7 +125,6 @@ html, body {
     height: 286px;
     object-fit: fill;
     border-radius: 10px;
-    scroll-snap-align: center;
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
@@ -138,10 +135,10 @@ html, body {
 
 
 .nav-btn {
-    background-color: transparent;
+    background-color: #00000048;
     min-height: 90%;
     border: none;
-    color: #f77051;
+    color: white;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
