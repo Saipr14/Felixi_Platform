@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"  crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -54,18 +55,39 @@
         display: block;
     }
 
+    .dp{
+        display: none;
+    }
+    .cap{
+        display: flex ;
+    }
+    #video-2{
+        display: none;
+    }
     @media (max-width: 1000px) {
     .navbar-nav{
         display: flex;
         flex-direction: row;
     }
     }
+
+    @media (max-width: 480px) {
+    .dp{
+        display: flex;
+    }
+    .cap{
+        display: none;
+    }
+    #video-2{
+        display: block;
+    }
+}
 /* For smaller screens */
 
     @media (max-width: 768px) {
     .navbar-nav{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .nav-btn {
@@ -90,8 +112,10 @@
 <body>
 <div class="background">
      <div id="video" style="position: absolute; z-index: -1;">
-        <video class="fluid-image" src="./Assets/Captain America_ The First Avenger Trailer 2.mp4" autoplay loop></video>
-        </div>
+        <video class="fluid-image" id="video-2" src="./Assets/Captain America_ The First Avenger Trailer 2.mp4" type="video/mp4"  autoplay loop></video>
+    </div>
+
+        
     <div class="container">
        <div class="back-drop"> </div>
         <nav class="navbar navbar-dark navbar-expand-lg bg-none px-md-5">
@@ -115,9 +139,12 @@
                     </div>
              </div>
         </nav>
-
- <div class="text-center welcome">
+ <div class="text-center welcome cap">
                 <h1 class="text-white" style="line-height: 4.2rem; font-size: 3rem;">Captain America: The First Avenger</h1>
+                <a href="./main.html"><button class="btn btn-lg">Watch Now ! ! !</button></a>
+            </div>
+ <div class="text-center welcome dp">
+                <h1 class="text-white" style="line-height: 4.2rem; font-size: 3rem;">Deadpool and Wolverine</h1>
                 <a href="./main.html"><button class="btn btn-lg">Watch Now ! ! !</button></a>
             </div>
     </div>
