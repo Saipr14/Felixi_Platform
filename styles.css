@@ -12,6 +12,7 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: #000000;
+    color: white;
 }
 
 /* navbar css settings start*/
@@ -39,7 +40,7 @@ html, body {
 #title{
     filter: drop-shadow(-8px 12px 24px #5d0516);
 }
-/* navbar css settings start*/
+/* navbar css settings end*/
 
 /* Background and title content css start */
 .background{
@@ -92,6 +93,7 @@ html, body {
 }
 /* Background and title content css end */
 
+/* Slider CSS start */
 .content-layer {
     display: flex;
     justify-content: center;
@@ -167,10 +169,9 @@ html, body {
     margin-left: 0.5rem;
     border-radius: 10px 0px 0px 11px;
 }
+/* Slider CSS start */
 
-
-
-/* Card css starr */
+/* Card css start */
 .midcard{
         border-radius: 5%;
         transition: transform 0.3s ease;
@@ -186,9 +187,9 @@ html, body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     }
+/* Card CSS end */
 
-/* login page */
-
+/* login page start*/
 .sheet {
   background-color: #5d0517bb;
   border-radius: 16px;
@@ -231,7 +232,7 @@ form input {
   z-index: -1;
 }
 
-.welcome_1{
+.login-container{
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -239,23 +240,209 @@ form input {
     min-height: 79vh;  
 }
 
-.welcome_1 h1{
+.login-container h1{
     font-size: clamp(2rem, 5rem, 10rem);
     color: #fff;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.welcome_1 button{
+.login-container button{
     padding: 1rem 5rem ;
     color: #5d0516;
     background-color:  #f77051;
     transition: background-color 0.3s ease;
 }
 
-.welcome_1 button:hover{
+.login-container button:hover{
     color: #f77051;
     background-color: #5d0516;
     transition: background-color 0.3s ease;
 }
+/* login page end */
 
+/* Library CSS start */
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#video video { 
+height: 50vh; 
+max-height: 100%; 
+box-shadow: -22px -143px 273px 0px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: -22px -143px 273px 0px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: -22px -143px 273px 0px rgba(0,0,0,0.75) inset;
+}
+
+#video video {
+    width: 100%;
+    height: 99%;
+    object-fit: cover; /* optional: ensures the video covers the area */
+    display: block;
+}
+
+.cap{
+    display: flex ;
+}
+.dp{
+    display: none;
+}
+
+.video-desktop,
+.video-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+
+@media (max-width: 480px) {
+    .dp{
+        display: flex !important;
+    }
+    .cap{
+        display: none !important;
+        
+    }
+    }
+
+/* For smaller screens */
+
+@media (max-width: 768px) {
+    .navbar-nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .right-slider img {
+        max-width: 250px;
+        height: 220px;
+    }
+
+    .top-banner img{
+        min-height: 32rem;
+    }
+}
+/* Library CSS end */
+
+/* Overlay Cards CSS start */
+.cardigo {
+  position: fixed;
+  top: 0; left: 0;
+  max-width: 100% !important;
+  height: 100vh;
+  display: none; /* initially hidden */
+  background: #00000060;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: display 5s ease-in;
+}
+
+.cardigo.show {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.mov-card {
+  position: relative;
+  width: 90%;
+  max-width: 45rem;
+  height: 90vh;
+  background-color: #1c1c1c !important;
+  overflow: scroll;
+  scrollbar-width: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.mov-card .cross{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-align: center;
+    background-color: #f77051;
+    color: #5d0516;
+}
+
+.mov-card .cross:hover {
+    color: #f77051;
+    background-color: #5d0516;
+}
+
+.mov-card .play-btn {
+    padding: 10px 17px;
+    font-size: 1.2rem;
+    color: #f77051;
+    background-color: none;
+    border: #5d0516 3px solid;
+}
+
+.mov-card img {
+    object-fit: cover;
+    border-radius: 0%;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mov-card .play-btn:hover {
+    background-color: #f77051;
+    color: #5d0516;
+}
+
+.mov-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+
+.card-body {
+    width: 100%;
+    padding: 20px;
+    background-color:  rgba(0, 0, 0, 0.911);
+    border-radius: 0 0 10px 10px;
+}
+
+.play-list .play-last:hover {
+    background-color: #f77051;
+    color: #5d0516;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.dropdown-menu {
+    background-color:#5d0516;
+    color: #f77051;
+} 
+
+.dropdown-item{
+    color: #f77051;
+    background-color: #5d0516;
+}
+
+.dropdown-item:hover {
+    background-color: #f77051;
+    color: #5d0516;
+}
+/* Overlay Cards CSS end */
